@@ -1263,7 +1263,7 @@ int main(void)
 			glUniform4f(specular, 1.0f, 1.0f, 1.0f, 1.0f);	// White
 			glUniform4f(atten, pMediator->m_vec_pBallLights.at(i)->getConstAtten(),  /* constant attenuation */	pMediator->m_vec_pBallLights.at(i)->getLinearAtten(),  /* Linear */ pMediator->m_vec_pBallLights.at(i)->getQuadraticAtten(),	/* Quadratic */  1.0f);	// Distance cut off
 			glUniform4f(direction, 0.0f, -1.0f, 0.0f, 1.0f);
-			glUniform4f(param1, 0.0f /*POINT light*/, 1.0f, 0.0f, 2.0f);
+			glUniform4f(param1, 1.0f /*SPOT light*/, 10.0f, 10.0f, 1.0f);
 			glUniform4f(param2, 1.0f /*Light is on*/, 0.0f, 0.0f, 1.0f);
 
 			lightIndex++;
